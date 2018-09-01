@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+	<mappers>
+		<!-- delete this demo line -->
+		<mapper resource="com/yzt/logic/mj/dao/xml/ClubMapper.xml" />
+		<mapper resource="com/yzt/logic/mj/dao/xml/RoomMapper.xml" />
+		<mapper resource="com/yzt/logic/mj/dao/xml/UserMapper.xml" />
+		
+		
+	</mappers>
+</configuration>

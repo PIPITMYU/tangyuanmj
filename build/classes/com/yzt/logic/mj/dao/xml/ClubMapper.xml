@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yzt.logic.mj.dao.ClubMapper">
+
+	<resultMap id="BRMClubUserUse" type="com.yzt.logic.mj.domain.ClubUserUse" >
+	  <id column="ID" property="id" jdbcType="INTEGER" />
+	  <result column="USER_ID" property="userId" jdbcType="INTEGER" />
+	  <result column="CLUB_ID" property="clubId" jdbcType="INTEGER" />
+	  <result column="ROOM_ID" property="roomId" jdbcType="INTEGER" />
+	  <result column="MONEY" property="money" jdbcType="INTEGER" />
+	  <result column="CREATE_TIME" property="createTime" jdbcType="BIGINT" />
+	  <!-- 不属于表字段的 -->
+	  
+	</resultMap>
+	<resultMap id="BRMClubInfo" type="com.yzt.logic.mj.domain.ClubInfo" >
+	  <id column="ID" property="id" jdbcType="INTEGER" />
+	  <result column="CLUB_ID" property="clubId" jdbcType="INTEGER" />
+	  <result column="CLUB_NAME" property="clubName" jdbcType="VARCHAR" />
+	  <result column="CREATE_ID" property="createId" jdbcType="INTEGER" />
+	  <result column="ROOM_CARD_NUM" property="roomCardNum" jdbcType="INTEGER" />
+	  <result column="PERSON_QUOTA" property="personQuota" jdbcType="INTEGER" />
+	  <result column="ROOM_CARD_QUOTA" property="roomCardQuota" jdbcType="INTEGER" />
+	  <result column="ROOM_CARD_NOTICE" property="roomCardNotice" jdbcType="INTEGER" />
+	  <result column="CREATE_TIME" property="createTime" jdbcType="BIGINT" />
+	  <result column="FREE_START" property="freeStart" jdbcType="BIGINT" />
+	  <result column="FREE_END" property="freeEnd" jdbcType="BIGINT" />
+	  <!-- 不属于表字段的 -->
+	  <!-- <result column="USER_NAME" property="createName" jdbcType="VARCHAR" /> -->
+	  
+	</resultMap>
+	<resultMap id="BRMClubUser" type="com.yzt.logic.mj.domain.ClubUser" >
+	  <id column="ID" property="id" jdbcType="INTEGER" />
+	  <result column="CLUB_ID" property="clubId" jdbcType="INTEGER" />
+	  <result column="USER_ID" property="userId" jdbcType="INTEGER" />
+  	  <result column="STATUS" property="status" jdbcType="INTEGER" />
+	  <result column="CREATE_TIME" property="createTime" jdbcType="BIGINT" />
+	  <!-- 不属于表字段的 -->
+	 <!--  <result column="CLUB_NAME" property="clubName" jdbcType="VARCHAR" />
+	  <result column="USER_NAME" property="createName" jdbcType="INTEGER" />
+	  <result column="SUM_PERSON" property="sumPerson" jdbcType="INTEGER" />
+	  <result column="PERSON_QUOTA" property="personQuota" jdbcType="INTEGER" /> -->
+	  
+	</resultMap>
+	<select id="selectByClubId" resultMap="BRMClubInfo" parameterType="java.lang.Integer">
+	    SELECT * FROM CLUB_INFO WHERE CLUB_ID = #{clubId}
+	</select> 
+	
+	<select id="allUsers" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+		select count(id) from CLUB_USER where CLUB_ID=#{clubId} and STATUS <![CDATA[ != ]]> 0
+	</select>
+	
+	<select id="selectCreateName" resultType="java.lang.String" parameterType="java.lang.Integer">
+	    SELECT USER_NAME from GAME_USER WHERE USER_ID = #{userId}
+	</select>
+
+	<select id="selectClubByUserId" resultMap="BRMClubUser" parameterType="map">
+	    SELECT * from CLUB_USER
+	    WHERE USER_ID = #{userId}  and STATUS  <![CDATA[ != ]]> 0
+	</select>
+	<!--  查找所有的俱乐部id -->
+	<select id="selectClubIdsByUserId" resultType="java.lang.Integer" parameterType="map">
+	    SELECT CLUB_ID from CLUB_USER
+	    WHERE USER_ID = #{userId}  and (STATUS = 1 or STATUS = 5)
+	</select>
+	
+	
+	<select id="countByClubId" resultType="java.lang.Integer" parameterType="map">
+    
+	    SELECT count(ID) from CLUB_USER where CLUB_ID = #{clubId} and STATUS = #{status}
+	</select>
+    
+      <select id="countByUserId" resultType="java.lang.Integer" parameterType="java.lang.Long">
+    
+	    SELECT count(ID) from CLUB_USER where USER_ID = #{userId} and (STATUS = 1 or STATUS = 2)
+	</select>
+	
+	<select id="selectUserByUserIdAndClubId" resultMap="BRMClubUser" parameterType="map">
+	    SELECT * from CLUB_USER  
+	    WHERE  CLUB_ID =#{clubId} and USER_ID = #{userId}
+	</select>
+	
+	<update id="updateById" parameterType="com.yzt.logic.mj.domain.ClubUser" >
+	    update CLUB_USER
+	    <set >
+	      <if test="clubId != null" >
+	        CLUB_ID = #{clubId,jdbcType=INTEGER},
+	      </if>
+	      <if test="userId != null" >
+	        USER_ID = #{userId,jdbcType=INTEGER},
+	      </if>  
+	      <if test="status != null" >
+	        STATUS = #{status,jdbcType=INTEGER},
+	      </if>   
+	      <if test="createTime != null" >
+	        CREATE_TIME = #{createTime,jdbcType=BIGINT},
+	      </if> 
+	    </set>
+	    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <insert id="insert" parameterType="com.yzt.logic.mj.domain.ClubUser">
+        INSERT INTO CLUB_USER(
+            CLUB_ID,USER_ID,STATUS,CREATE_TIME  
+        )
+        VALUES (
+           #{clubId},#{userId},#{status},#{createTime} 
+        )
+    </insert>
+    <!-- 今日消耗房卡 -->
+     <select id="sumMoneyByClubIdAndDate" resultType="java.lang.Integer" parameterType="map">
+    
+	   SELECT SUM(MONEY) from CLUB_USER_USE  where  
+	   	     CREATE_TIME  &gt;=  #{morning} 
+			and  CREATE_TIME  &lt;=  #{night} and CLUB_ID = #{clubId}
+	</select>
+	
+	<!-- 今日活跃人数   暂时走缓存，不用-->
+	<select id="todayPerson" parameterType="map" resultType="java.lang.Integer">
+		SELECT  DISTINCT cu.USER_ID  
+
+		FROM  CLUB_USER cu, CLUB_GAME_ROOM cpr where
+
+		(cu.USER_ID = cpr.USER_ID1 or cu.USER_ID = cpr.USER_ID2
+
+		or cu.USER_ID = cpr.USER_ID3  or cu.USER_ID = cpr.USER_ID4) 
+						
+		and cpr.CLUB_ID = #{clubId} and CREATE_TIME&gt;=#{morning} and CREATE_TIME&lt;#{night}
+ 
+	</select>
+	
+	<!-- 今日局数 -->
+	<select id="todayGames" parameterType="map" resultType="java.lang.Integer">
+		SELECT COUNT(ROOM_ID) FROM CLUB_GAME_ROOM WHERE 
+		CLUB_ID=#{clubId} and CREATE_TIME&gt;=#{morning} and CREATE_TIME&lt;#{night}
+	</select>
+	
+	<select id="selectUserState" parameterType="map" resultType="java.lang.Integer">
+		select STATUS from CLUB_USER where CLUB_ID = #{clubId} and USER_ID = #{userId}
+	</select>
+	
+	<!--玩家 今日局数 -->
+	<select id="userTodayGames" parameterType="map" resultType="java.lang.Integer">
+		SELECT COUNT(CIRCLE_NUM) FROM CLUB_GAME_ROOM WHERE (USER_ID1 = #{userId} OR USER_ID2 = #{userId} OR
+		USER_ID3 = #{userId} OR  USER_ID4 = #{userId})  and CREATE_TIME&gt;=#{morning} and CREATE_TIME&lt;#{night}
+		AND CLUB_ID=#{clubId}
+	</select>
+	<!-- 玩家今日消耗房卡数 -->
+	<select id="todayUse" parameterType="map" resultType="java.lang.Integer">
+		SELECT sum(MONEY) from CLUB_USER_USE where 
+		USER_ID=#{userId}  and CREATE_TIME&gt;=#{morning} and CREATE_TIME&lt;#{night}  and CLUB_ID=#{clubId}
+	</select>
+	
+	 <insert id="saveRoom">
+ 
+        INSERT INTO CLUB_GAME_ROOM
+		(
+			CLUB_ID,
+			ROOM_ID,
+			CREATE_ID,
+			CREATE_TIME,
+			USER_ID1,
+			USER_ID2,
+			USER_ID3,
+			USER_ID4,
+			IS_PLAYING,
+			ROOM_TYPE,
+			CIRCLE_NUM,
+			SERVER_IP,
+			SCORE_TYPE,
+			XIAO_JU_NUM,
+			SHEN_FENG,
+			DAI_TE,
+			QI_DUI,
+			GANG_ZHUANG,
+			GANG_FAN_BEI,
+			DIAO_YU
+		)
+			VALUES 
+		(
+			#{clubId},
+			#{roomId},
+			#{createId},
+			#{createTime},
+			#{userId1},
+			#{userId2},
+			#{userId3},
+			#{userId4},
+			#{isPlaying},
+			#{roomType},
+			#{circleNum},
+			#{ip},
+			#{scoreType},
+			#{xiaoJuNum},
+			#{shenFeng},
+			#{daiTe},
+			#{qiDui},
+			#{gangZhuang},
+			#{gangFanBei},
+			#{diaoYu}
+		)        
+    </insert>
+     
+    <update id="updateClubMoney">
+    	update CLUB_INFO set ROOM_CARD_NUM = ROOM_CARD_NUM - #{money} where CLUB_ID = #{clubId}
+    </update>
+    
+    <insert id="saveUserUse">
+    	INSERT INTO CLUB_USER_USE(
+            CLUB_ID,USER_ID,ROOM_ID,CREATE_TIME,MONEY  
+        )
+        VALUES (
+           #{clubId},#{userId},#{roomId},#{createTime},#{money} 
+        )
+    </insert>
+    
+    <update id="updateRoomState">
+        update CLUB_GAME_ROOM set IS_PLAYING = 0 ,XIAO_JU_NUM = #{xiaoJuNum} where ROOM_ID = #{roomId}
+    </update>
+    
+    
+</mapper>

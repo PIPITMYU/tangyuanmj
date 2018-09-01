@@ -1,0 +1,17 @@
+说明:所有逻辑代码均在com.yzt.logic中完成
+2018-03-09
+1、每个连接由WSClientManager管理，后端想要主动关闭连接，调用其removeWSClient()方法即可。
+2、请求进入Executer时，所有的数据都是简单过滤后的有效数据，并且路由已经转换，可以直接使用，但是对每个接口的参数仍需校验。
+前提是每个interfaceId必须在Executer的interfaceIds里添加，value为1为通用逻辑，即测试正式都用的；value为0代表只能测试服用，比如改牌之类的接口。
+3、所有业务逻辑都在mj.function包下，分功能建类。
+4、注意：这个框架不需要前端制动发送心跳来保活，保活由netty负责，后端只需要开发断线后的逻辑即可，玩家掉线后的业务逻辑，需要填充各自adapter的playerOut方法。
+5、项目入口在com.yzt.logic.main.Main.class里，如果项目启动需要初始化什么方法，在这里添加，必须在调用init()方法之前。
+6、发送消息调用MessageUtils.sendMessage，根据情况使用，例见DemoFunction
+7、项目里输出全用log，不用System.out
+8、在dao层获取数据库信息时，禁止使用selectOne方法
+9、Demo开头的类里是测试方法，这些类可以删除.
+10、定时任务模块使用java.util.concurrent.ScheduledExecutorService中的两个方法实现，scheduleAtFixedRate和scheduleWithFixedDelay，用法在TestTuiSong类中有介绍，根据情况使用
+11、如果是麻将项目，需要加载TableMgr.getInstance().load();意思是加载所有胡牌类型，带混不带混都可以用，最多支持8个混
+12、业务逻辑类需要继承AbstractFunction，获取到连接管理器，调用父类getWSClientManager()即可。
+13、前端的连接方式为：ws:/ip:port/mj
+待续...

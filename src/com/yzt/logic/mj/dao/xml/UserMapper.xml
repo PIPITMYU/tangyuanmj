@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yzt.logic.mj.dao.UserMapper">
+    <resultMap id="player" type="com.yzt.logic.mj.domain.Player">
+        <result property="id" column="ID" />
+        <result property="userId" column="USER_ID" />
+        <result property="openId" column="OPEN_ID" />
+        <result property="userName" column="USER_NAME" />
+        <result property="userImg" column="USER_IMG" />
+        <result property="gender" column="GENDER" />
+        <result property="money" column="MONEY" />
+        <result property="userAgree" column="USER_AGREE" />
+    </resultMap>
+
+    <sql id="info">
+        ID,USER_ID,OPEN_ID,USER_NAME,USER_IMG,GENDER,MONEY,USER_AGREE
+    </sql>
+
+
+    <insert id="insert" parameterType="map">
+        INSERT INTO GAME_USER(
+            USER_ID,
+            OPEN_ID,
+            USER_NAME,
+            USER_IMG,
+            GENDER,
+            MONEY,
+            USER_AGREE,
+            LOGIN_STATUS,
+            SIGN_UP_TIME,
+            LAST_LOGIN_TIME,
+            CID,
+            IP
+        )
+        VALUES (
+           #{userId},#{openId},#{userName},#{userImg},#{gender},
+           #{money},#{userAgree},#{loginStatus},
+           #{signUpTime},#{lastLoginTime},#{cId},#{ip}
+        )
+    </insert>
+
+
+    <update id="update">
+        UPDATE GAME_USER SET
+        USER_ID = #{userId},
+        OPEN_ID = #{openId},
+        MONEY = #{money},
+        USER_AGREE = #{userAgree},
+        LOGIN_STATUS = #{loginStatus},
+        SIGN_UP_TIME = #{signUpTime},
+        IP = #{ip},
+        LAST_LOGIN_TIME = #{lastLoginTime}    
+        WHERE ID = #{id}
+    </update>
+
+    <update id="updateMoney">
+        update GAME_USER set MONEY=#{money} where USER_ID = #{userId}
+    </update>
+
+    
+	<select id="findByOpenId" resultMap = "player">
+		SELECT 
+		USER_ID AS userId,
+		OPEN_ID AS openId,
+		USER_NAME AS userName,
+		USER_IMG AS userImg,
+		GENDER AS gender,
+		MONEY AS money,
+		USER_AGREE AS userAgree
+		FROM `GAME_USER` WHERE OPEN_ID = #{openId} and CID = #{cid}
+	</select>
+    
+    
+	<select id="isExistUserId" resultType="java.lang.Integer" resultMap="player">
+        SELECT ID FROM GAME_USER WHERE USER_ID = #{userId}
+    </select>
+
+
+
+    <insert id="userFeedback">
+        INSERT INTO GAME_FEEDBACK(USER_ID,CONTENT,TEL,CREATE_TIME)
+        VALUES (#{userId},#{content},#{tel},#{createTime})
+    </insert>
+
+
+    <update id="updateUserAgree">
+        update `GAME_USER` set USER_AGREE = 1 WHERE  USER_ID=#{userId}
+    </update>
+
+    <select id="getNotice" resultType="java.lang.String">
+        select CONTENT from  GAME_NOTICE where TYPE = 1
+    </select>
+
+    <select id="getSystemMessage" resultType="com.yzt.logic.mj.domain.SystemMessage">
+        select
+        CREATE_TIME as createTime,
+        CONTENT as content,
+        USER_ID as userId
+        from GAME_SYSTEM_MESSAGE
+        limit #{start},#{limit}
+    </select>
+    
+    <select id="getConectUs" resultType="java.lang.String">
+        select CONTENT_US
+        from GAME_SYSTEM_MESSAGE where STATE = 1
+    </select>
+
+    
+    
+    <select id="getUserMoneyByUserId" resultType="java.lang.Integer">
+    	select MONEY from GAME_USER where USER_ID=#{userId} 
+    </select>
+	
+	<update id="updateIpAndLastTime" parameterType="map">
+		update GAME_USER set LAST_LOGIN_TIME = #{lastLoginTime},IP = #{ip} where OPEN_ID = #{openId}
+	</update>
+	
+	 <select id="findIpByUserId" resultType="java.lang.String" parameterType="map">
+    	select IP from GAME_USER where USER_ID=#{userId} 
+    </select>
+    
+    <update id="updateNameImgGer" parameterType="map">
+    	update GAME_USER set USER_NAME = #{userName},USER_IMG = #{userImg},GENDER = #{gender} where USER_ID = #{userId}
+    </update>
+    
+    <select id="getInitMoney" parameterType="map" resultType="java.lang.Integer">
+    	select INIT_MONEY FROM GAME_NOTICE WHERE CID = #{cid}
+    </select>
+</mapper>
