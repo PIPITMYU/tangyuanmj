@@ -402,6 +402,13 @@ public class GameFunctions extends TCPGameFunctions {
 
 		} else if (action <= 34 && action >= 1) {
 			logger.info("1-34中的牌    出牌!!!");
+			if(currentPlayer.getShouBaYi() == 2){
+				if(action != room.getLastFaPai()){
+					logger.info("手扒一了啊 大哥");
+					illegalRequest(interfaceId, channel);
+					return;
+				}
+			}
 			ac = new Action(Cnst.ACTION_TYPE_CHUPAI, action, userId, null, null);
 			// 设置最后出牌的玩家
 			room.setLastChuPaiUserId(userId);
@@ -410,6 +417,8 @@ public class GameFunctions extends TCPGameFunctions {
 			// 移除手牌 添加已出过的牌
 			MahjongUtils.removePai(currentPlayer, action);
 			currentPlayer.getChuList().add(action);
+			//检测手把一把
+			MahjongUtils.setShouBaYi(currentPlayer);
 			// 遍历所有玩家的动作集合.设定 过list
 			room.getGuoUserIds().add(currentPlayer.getUserId());
 			// 检测所有玩家的动作并排序.

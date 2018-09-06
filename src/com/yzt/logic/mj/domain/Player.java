@@ -43,6 +43,7 @@ public class Player extends User {
 	private List<Action> actionList =new ArrayList<Action>();//统计用户所有动作 (吃碰杠等)
 	private Integer yuFen;//当局鱼粉
 	private Integer gangScore;//当局杠分
+	private Integer shouBaYi;//手扒一 1/正常 2/摸哪打哪
 
 	private Double x_index;
 	private Double y_index;
@@ -69,6 +70,7 @@ public class Player extends User {
 		this.fanShu = new ArrayList<Integer>();
 		this.gangScore = 0;
 		this.yuFen = 0;
+		this.setShouBaYi(1);
 	}
 
 	
@@ -293,6 +295,18 @@ public class Player extends User {
 
 	public void setYuFen(Integer yuFen) {
 		this.yuFen = yuFen;
+	}
+
+
+
+	public Integer getShouBaYi() {
+		return shouBaYi;
+	}
+
+
+
+	public void setShouBaYi(Integer shouBaYi) {
+		this.shouBaYi = shouBaYi;
 	}
 	
 	

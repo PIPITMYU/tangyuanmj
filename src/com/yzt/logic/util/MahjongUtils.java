@@ -388,7 +388,7 @@ public class MahjongUtils {
 			if (shouPai.get(i) == 1 || shouPai.get(i) == 10
 					|| shouPai.get(i) == 19 || shouPai.get(i) == 9
 					|| shouPai.get(i) == 18 || shouPai.get(i) == 27
-					|| shouPai.get(i) == 32) {
+					) {
 				return true;
 
 			}
@@ -972,9 +972,14 @@ public class MahjongUtils {
 		// 自摸两番
 		if (p.getIsZiMo()) {
 			fen = fen * 2;
-			winInfo.add(Cnst.ZIMO);
 		} else {
+			winInfo.add(Cnst.ZIMO);
 //			winInfo.add(Cnst.DIANPAO);
+		}
+		//手扒一
+		if(isHuShouBaYi(p)){
+			winInfo.add(Cnst.SHOUBAYI);
+			fen = fen * 2;
 		}
 		p.setFanShu(winInfo);
 
@@ -1425,6 +1430,34 @@ public class MahjongUtils {
 				}
 			}
 
+		}
+		return false;
+	}
+	
+	//出完牌 设置手把一
+	public static void setShouBaYi(Player p){
+		if(p.getShouBaYi() == 2){
+			return;
+		}
+		
+		if(p.getCurrentMjList().size() == 1){
+			boolean allChi = true;
+			for(Action a:p.getActionList()){
+				if(a.getType()!=1){
+					allChi = false;
+					break;
+				}
+			}
+			if(allChi == false && checkYiJiu(p, p.getCurrentMjList())){
+				p.setShouBaYi(2);
+			}
+		}
+	}
+	
+	//结算 判断手扒一 为什么不用上边那个方法 防止一手吃 摸俩红中 胡了
+	public static boolean isHuShouBaYi(Player p){
+		if(p.getCurrentMjList().size() == 2){
+			return true;
 		}
 		return false;
 	}

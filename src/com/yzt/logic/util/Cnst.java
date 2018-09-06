@@ -375,6 +375,7 @@ public class Cnst {
     	ROUTE_MAP_SEND.put("ee", "gangFanBei");
     	ROUTE_MAP_SEND.put("ef", "diaoYu");
     	ROUTE_MAP_SEND.put("eg", "yuFen");
+    	ROUTE_MAP_SEND.put("eh", "shouBaYi");
     	
     	Iterator<String> i = ROUTE_MAP_SEND.keySet().iterator();
     	while(i.hasNext()){
@@ -448,7 +449,7 @@ public class Cnst {
     public static final int TE = 10;
     public static final int ZHUANG = 11;
     public static final int MENQING = 12;
-
+    public static final int SHOUBAYI = 13;
 	public static final ArrayList<Integer> ACTION_YI_JIU =new ArrayList<Integer>();
     static{
     	//吃的1-9
