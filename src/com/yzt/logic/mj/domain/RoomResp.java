@@ -52,6 +52,8 @@ public class RoomResp extends Room {
 	private Long windPosition;//风向 （发牌，吃碰杠更新）
 	private List<Integer> teList = new ArrayList<Integer>();//碰牌 集合 判断特用
 	private Integer yuPai;//鱼牌
+	private Boolean isQiangGangHu;//抢杠胡
+	private List<Long> qiangGangHu = new ArrayList<Long>();//抢杠胡的集合 这里不用guoList 有点乱
 	public void initRoom() {
 		this.lastChuPai = null;
 		this.lastChuPaiUserId = null;
@@ -71,6 +73,8 @@ public class RoomResp extends Room {
 		this.windPosition = null;
 		this.teList = new ArrayList<Integer>();
 		this.yuPai = null;
+		this.isQiangGangHu = false;
+		this.qiangGangHu = new ArrayList<Long>();
 	}
 
 	
@@ -372,6 +376,26 @@ public class RoomResp extends Room {
 
 	public void setWindPosition(Long windPosition) {
 		this.windPosition = windPosition;
+	}
+
+
+	public Boolean getIsQiangGangHu() {
+		return isQiangGangHu;
+	}
+
+
+	public void setIsQiangGangHu(Boolean isQiangGangHu) {
+		this.isQiangGangHu = isQiangGangHu;
+	}
+
+
+	public List<Long> getQiangGangHu() {
+		return qiangGangHu;
+	}
+
+
+	public void setQiangGangHu(List<Long> qiangGangHu) {
+		this.qiangGangHu = qiangGangHu;
 	}
 	
 	

@@ -230,7 +230,21 @@ public class MahjongUtils {
 			}
 			return actionList;
 		}
-
+		
+		if(Cnst.CHECK_TYPE_QIANGGANG == type){
+			if (checkHuRule(p,room,pai,Cnst.CHECK_TYPE_BIERENCHU)) {
+				//胡的这张必须是特
+				if(checkQiangGangHu(p, room, pai)) {
+					actionList.add(500);
+				}
+														
+			}
+			if(actionList.size() > 0){
+				actionList.add(0);
+			}
+			return actionList;
+		}
+		
 		if (checkChi
 				&& type != Cnst.CHECK_TYPE_ZIJIMO && checkChi(p, pai)) {
 			List<Integer> c = chi(p, pai);
@@ -298,40 +312,40 @@ public class MahjongUtils {
 		return gangList;
 	}
 
-//	/**
-//	 * 手把一
-//	 * 
-//	 * @param p
-//	 * @param type
-//	 * @return
-//	 */
-//	public static boolean isShouBaYi(Player p, Integer type, Integer actionType) {
-//		// 飘可以手把一 
-//		List<Action> actions = p.getActionList();
-//		in: if (actions != null && actionType != Cnst.ACTION_TYPE_CHI
-//				&& actions.size() == 3) {
-//			for (Action action : actions) {
-//				if (action.getType() == Cnst.ACTION_TYPE_CHI) {
-//					break in;
-//				}
-//			}
-//			return true;
-//		}
-//		if (type == Cnst.CHECK_TYPE_BIERENCHU) {
-//			if (p.getCurrentMjList().size() <= 4) {
-//				return false;
-//			}
-//			return true;
-//		}
-//		if (type == Cnst.CHECK_TYPE_ZIJIMO
-//				|| type == Cnst.CHECK_TYPE_HAIDIANPAI) {
-//			if (p.getCurrentMjList().size() <= 5) {
-//				return false;
-//			}
-//			return true;
-//		}
-//		return false;
-//	}
+	/**
+	 * 手把一
+	 * 
+	 * @param p
+	 * @param type
+	 * @return
+	 */
+	public static boolean isShouBaYi(Player p, Integer type, Integer actionType) {
+		// 飘可以手把一 
+		List<Action> actions = p.getActionList();
+		in: if (actions != null && actionType != Cnst.ACTION_TYPE_CHI
+				&& actions.size() == 3) {
+			for (Action action : actions) {
+				if (action.getType() == Cnst.ACTION_TYPE_CHI) {
+					break in;
+				}
+			}
+			return true;
+		}
+		if (type == Cnst.CHECK_TYPE_BIERENCHU) {
+			if (p.getCurrentMjList().size() <= 4) {
+				return false;
+			}
+			return true;
+		}
+		if (type == Cnst.CHECK_TYPE_ZIJIMO
+				|| type == Cnst.CHECK_TYPE_HAIDIANPAI) {
+			if (p.getCurrentMjList().size() <= 5) {
+				return false;
+			}
+			return true;
+		}
+		return false;
+	}
 
 	/**
 	 * 牌型是否有刻牌(三个一样或者四个一样)
@@ -972,8 +986,8 @@ public class MahjongUtils {
 		// 自摸两番
 		if (p.getIsZiMo()) {
 			fen = fen * 2;
-		} else {
 			winInfo.add(Cnst.ZIMO);
+		} else {		
 //			winInfo.add(Cnst.DIANPAO);
 		}
 		//手扒一
@@ -1435,7 +1449,7 @@ public class MahjongUtils {
 	}
 	
 	//出完牌 设置手把一
-	public static void setShouBaYi(Player p){
+	public static void setShouBaYi(Player p,RoomResp room){
 		if(p.getShouBaYi() == 2){
 			return;
 		}
@@ -1448,7 +1462,7 @@ public class MahjongUtils {
 					break;
 				}
 			}
-			if(allChi == false && checkYiJiu(p, p.getCurrentMjList())){
+			if(allChi == false && (checkYiJiu(p, p.getCurrentMjList())|| checkShenFeng(p, room, p.getCurrentMjList()))){
 				p.setShouBaYi(2);
 			}
 		}
@@ -1457,6 +1471,69 @@ public class MahjongUtils {
 	//结算 判断手扒一 为什么不用上边那个方法 防止一手吃 摸俩红中 胡了
 	public static boolean isHuShouBaYi(Player p){
 		if(p.getCurrentMjList().size() == 2){
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * 必须满足特 才可以抢杠胡
+	 * @param winPlayer
+	 * @param room
+	 * @return
+	 */
+	public static Boolean checkQiangGangHu(Player winPlayer, RoomResp room,Integer pai) {
+		List<Integer> currentMjList = winPlayer.getCurrentMjList();
+		List<Integer> newList = getNewList(currentMjList);
+		newList.add(pai);
+		int size = newList.size();
+		Integer dongZuoPai = newList.get(size - 1);
+		// 移除这张牌剩下的牌集合
+		newList.remove(size - 1);
+		// 获取手牌的数组集合
+		int[] shouPaiArr = new int[34];
+		for (Integer integer : newList) {
+			int i = shouPaiArr[integer - 1];
+			shouPaiArr[integer - 1] = i + 1;
+		}
+		// 最后那张不能是红中
+		if (dongZuoPai != 32) {
+			// 定义动作牌的数子大小
+			int dongZuoPaiNum = dongZuoPai % 9;		
+			// 说明没有红中或者房间规则没有神风
+			// 动作牌必须是1或者9
+			if (dongZuoPaiNum == 1 || dongZuoPaiNum == 0) {
+				// 检测特殊,如果胡 1,4 但是没1,9(1,9必须存在才胡),那么也算
+				// 有神风选项
+				if (room.getShenFeng().equals(1)) {
+					// 有红中的花不用检测了,直接不成立
+					if (shouPaiArr[32 - 1] > 0) {
+						return false;
+					}
+				}
+				// 手牌里面必须没有1,9 和玩家的动作里面必须没有1和9
+				if (!checkYiJiu(winPlayer, newList)) {
+					// 手牌里面没有1,9
+					return true;
+				}
+			}
+
+		}
+		int huNum = 0;
+		//检测吊  只能胡一张 这里循环28张牌 往里带 只能胡一次
+		for(int i=0;i<=27;i++){
+			if(i == 27){
+				//单独带红中
+				i = 31;
+			}
+			shouPaiArr[i] = shouPaiArr[i] + 1;
+			if (Hulib.getInstance().get_hu_info(shouPaiArr, 34, 34)) {
+				huNum ++;
+			}
+			//在减回去
+			shouPaiArr[i] = shouPaiArr[i] - 1;
+		}
+		if(huNum == 1){
 			return true;
 		}
 		return false;

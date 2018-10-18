@@ -344,54 +344,90 @@ public class GameFunctions extends TCPGameFunctions {
 		} else if (action == 0) {
 			logger.info("过!!!!!!");
 			ac = new Action(Cnst.ACTION_TYPE_GUO, action, userId, null, null);
-			if (room.getLastFaPaiUserId().equals(userId)
-					&& room.getGuoUserIds().size() == 0) {
-				// 自己摸到牌点过
+			if(room.getIsQiangGangHu()!=null && room.getIsQiangGangHu() == true){
+				//抢杠胡点过				
 				List<Integer> nextAction = new ArrayList<Integer>();
-				nextAction.add(501);
-				room.setNextAction(nextAction);
-				room.setNextActionUserId(userId);
-			} else {
-				// 点击过的人的集合
-				room.getGuoUserIds().add(currentPlayer.getUserId());
-				// 最后一个人点击过,数量为4.这个牌没人需要.开始发下一张牌. 并清空点过的集合
-				if (room.getGuoUserIds().size() == 4) {
-					room.getGuoUserIds().clear();
-
-					getNextFaPai(room);
+				room.getQiangGangHu().remove(userId);
+				if(room.getQiangGangHu().size() == 0){
+					room.setIsQiangGangHu(false);
+					nextAction.add(-1);
+					room.setNextAction(nextAction);
+					room.setNextActionUserId(room.getLastActionUserId());
+				}else{
+					nextAction.add(500);
+					nextAction.add(0);
+					room.setNextAction(nextAction);
+					room.setNextActionUserId(room.getQiangGangHu().get(0));
+				}
+				
+			}else{
+				if (room.getLastFaPaiUserId().equals(userId)
+						&& room.getGuoUserIds().size() == 0) {
+					// 自己摸到牌点过
+					List<Integer> nextAction = new ArrayList<Integer>();
+					nextAction.add(501);
+					room.setNextAction(nextAction);
+					room.setNextActionUserId(userId);
 				} else {
-					MahjongUtils.getNextAction(players, room,
-							room.getLastChuPai());
+					// 点击过的人的集合
+					room.getGuoUserIds().add(currentPlayer.getUserId());
+					// 最后一个人点击过,数量为4.这个牌没人需要.开始发下一张牌. 并清空点过的集合
+					if (room.getGuoUserIds().size() == 4) {
+						room.getGuoUserIds().clear();
+	
+						getNextFaPai(room);
+					} else {
+						MahjongUtils.getNextAction(players, room,
+								room.getLastChuPai());
+					}
 				}
 			}
-
 			// 胡
 		} else if (action == 500) {
 			logger.info("当前用户选择胡了!!!");
 			// TODO 是否杠开
 			room.setWinPlayerId(userId);
 			currentPlayer.setIsHu(true);
-
-			// 先保留胡的最后一张牌
-			if (room.getLastFaPaiUserId().equals(userId)
-					&& room.getGuoUserIds().size() == 0) {
-				// 自摸
-				ac = new Action(Cnst.ACTION_TYPE_HU, action, userId, userId,
-						null);
-				currentPlayer.setIsZiMo(true);
-				currentPlayer.setZimoNum(currentPlayer.getZimoNum() == null ? 1
-						: currentPlayer.getZimoNum() + 1);
-			} else {
-				ac = new Action(Cnst.ACTION_TYPE_HU, action, userId,
-						room.getLastChuPaiUserId(), null);
-				currentMjList.add(room.getLastChuPai());
-				for (Player p : players) {
-					if (p.getUserId().equals(room.getLastChuPaiUserId())) {
+			if(room.getIsQiangGangHu() != null && room.getIsQiangGangHu() == true){
+				//移除最后一个玩家的杠
+				ac = new Action(Cnst.ACTION_TYPE_HU,action,userId,room.getLastActionUserId(),null);
+				currentMjList.add(room.getLastAction() - 90);
+				for(Player p:players){
+					if(p.getUserId().equals(room.getLastActionUserId())){
 						p.setIsDian(true);
-						p.setDianNum(p.getDianNum() == null ? 1 : p
-								.getDianNum() + 1);
+						p.setDianNum(p.getDianNum() == null? 1:p.getDianNum()+1);
+						for(int i=0;i<p.getActionList().size();i++){
+							if(p.getActionList().get(i).getActionId() == room.getLastAction()){
+								p.getActionList().get(i).setActionId(room.getLastAction() - 34);
+								p.getActionList().get(i).setType(Cnst.ACTION_TYPE_PENG);
+							}
+						}
 						RedisUtil.updateRedisData(null, p);
 						break;
+					}
+				}
+			}else{
+			// 先保留胡的最后一张牌
+				if (room.getLastFaPaiUserId().equals(userId)
+						&& room.getGuoUserIds().size() == 0) {
+					// 自摸
+					ac = new Action(Cnst.ACTION_TYPE_HU, action, userId, userId,
+							null);
+					currentPlayer.setIsZiMo(true);
+					currentPlayer.setZimoNum(currentPlayer.getZimoNum() == null ? 1
+							: currentPlayer.getZimoNum() + 1);
+				} else {
+					ac = new Action(Cnst.ACTION_TYPE_HU, action, userId,
+							room.getLastChuPaiUserId(), null);
+					currentMjList.add(room.getLastChuPai());
+					for (Player p : players) {
+						if (p.getUserId().equals(room.getLastChuPaiUserId())) {
+							p.setIsDian(true);
+							p.setDianNum(p.getDianNum() == null ? 1 : p
+									.getDianNum() + 1);
+							RedisUtil.updateRedisData(null, p);
+							break;
+						}
 					}
 				}
 			}
@@ -418,7 +454,7 @@ public class GameFunctions extends TCPGameFunctions {
 			MahjongUtils.removePai(currentPlayer, action);
 			currentPlayer.getChuList().add(action);
 			//检测手把一把
-			MahjongUtils.setShouBaYi(currentPlayer);
+			MahjongUtils.setShouBaYi(currentPlayer,room);
 			// 遍历所有玩家的动作集合.设定 过list
 			room.getGuoUserIds().add(currentPlayer.getUserId());
 			// 检测所有玩家的动作并排序.
@@ -459,7 +495,7 @@ public class GameFunctions extends TCPGameFunctions {
 			// Integer extra
 			ac = new Action(Cnst.ACTION_TYPE_PENG, action,
 					currentPlayer.getUserId(), room.getLastChuPaiUserId(),
-					room.getLastChuPai());
+					room.getLastChuPai()); 
 			currentPlayer.addActionList(ac);
 			// 移除手牌
 			MahjongUtils.removeActionMj(currentMjList, null, action,
@@ -510,6 +546,26 @@ public class GameFunctions extends TCPGameFunctions {
 						Cnst.ACTION_TYPE_PENGGANG);
 				// 移除桌面上被玩家吃掉的牌
 				MahjongUtils.removeCPG(room, players);
+				//碰杠完可以换牌
+				currentPlayer.setShouBaYi(1);
+				//带特 检测抢杠胡
+				if(room.getDaiTe() == 1) {
+					for(Player p:players){
+						if(p.getUserId().equals(userId)){
+							continue;
+						}
+						List<Integer> qiangGang = MahjongUtils.checkActionList(p, pai, room,Cnst.CHECK_TYPE_QIANGGANG,false);
+						if(qiangGang.size() > 0){
+							room.getQiangGangHu().add(p.getUserId());
+							room.setNextAction(qiangGang);
+						}
+					}
+					if(room.getQiangGangHu().size() > 0){
+						room.setIsQiangGangHu(true);
+						room.setNextActionUserId(room.getQiangGangHu().get(0));
+					}
+				}
+				
 			} else if (gangPaiNum == 4) {
 				// 暗杠
 				ac = new Action(Cnst.ACTION_TYPE_ANGANG, action, userId, null,
@@ -531,11 +587,15 @@ public class GameFunctions extends TCPGameFunctions {
 				MahjongUtils.removeCPG(room, players);
 			}
 
-			// 杠完摸牌
-			List<Integer> nextAction = new ArrayList<Integer>();
-			room.setNextAction(nextAction);
-			room.setNextActionUserId(userId);
-			nextAction.add(-1);
+			if(room.getIsQiangGangHu() != null && room.getIsQiangGangHu() == true){
+				//胡牌
+			}else{
+				//杠完摸牌
+				List<Integer> nextAction = new ArrayList<Integer>();
+				nextAction.add(-1);
+				room.setNextAction(nextAction);
+				room.setNextActionUserId(userId);						
+			}
 
 		}
 

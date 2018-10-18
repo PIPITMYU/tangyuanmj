@@ -1,0 +1,182 @@
+2018-06-08 10:19:28,366-[YZT] [INFO] main com.yzt.logic.util.ProjectInfoPropertyUtil - 加载properties文件内容完成...........
+2018-06-08 10:20:11,856-[YZT] [INFO] main com.yzt.logic.util.ProjectInfoPropertyUtil - 加载properties文件内容完成...........
+2018-06-08 10:20:11,924-[YZT] [INFO] main com.yzt.logic.util.redis.MyRedis - redis 初始化完成
+2018-06-08 10:20:12,371-[YZT] [INFO] main com.yzt.logic.util.CreateInterfacedFile - 生成中·········生成接口文档在桌面·······我日桌面不给生成 扔D盘了
+2018-06-08 10:20:13,382-[YZT] [WARN] pool-3-thread-1 io.netty.bootstrap.ServerBootstrap - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x91989435]'
+2018-06-08 10:20:13,396-[YZT] [INFO] pool-3-thread-1 io.netty.channel.ChannelInboundHandlerAdapter - webSocket server startup with port 8245
+2018-06-08 10:20:54,974-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为ae757138,当前连接数为：1
+2018-06-08 10:20:55,020-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - [100100-RECEIVE_DATE]:{openId=wsw-14, interfaceId=100100, cId=47}
+2018-06-08 10:20:55,039-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.dao.UserMapper - sql name ==>>com.yzt.logic.mj.dao.UserMapper.getNotice
+2018-06-08 10:20:58,370-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - [100100-SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/390509.jpg, gender=1, money=80, ip=192.168.1.156, position=null, state=1, userName=wsw-14, userId=390509, notice=汤圆测试服，文明游戏，禁止赌博}}
+2018-06-08 10:20:58,376-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - 请求处理时间：3356
+2018-06-08 10:21:43,702-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - [100007-RECEIVE_DATE]:{daiTe=1, gangZhuang=1, diaoYu=1, qiDui=1, scoreType=1, interfaceId=100007, gangFanBei=1, userId=390509, shenFeng=1, roomType=2, circleNum=2}
+2018-06-08 10:21:43,702-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - 创建房间,interfaceId -> 100007
+2018-06-08 10:21:43,732-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - [100007-SEND_DATA]:{reqState=2, roomType=2}
+2018-06-08 10:21:43,733-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - 请求处理时间：31
+2018-06-08 10:21:47,285-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为e76b2218,当前连接数为：2
+2018-06-08 10:21:47,306-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - [100100-RECEIVE_DATE]:{openId=wsw-15, interfaceId=100100, cId=47}
+2018-06-08 10:21:48,386-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - [100100-SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/809529.jpg, gender=1, money=100, ip=192.168.1.156, position=null, state=1, userName=wsw-15, userId=809529, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-08 10:21:48,387-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - 请求处理时间：1087
+2018-06-08 10:21:51,728-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - [100007-RECEIVE_DATE]:{daiTe=1, gangZhuang=1, diaoYu=1, qiDui=1, scoreType=1, interfaceId=100007, gangFanBei=1, userId=809529, shenFeng=1, roomType=2, circleNum=2}
+2018-06-08 10:21:51,731-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - 创建房间,interfaceId -> 100007
+2018-06-08 10:21:51,741-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - [100007-SEND_DATA]:{userInfo={}, reqState=10, roomInfo={gangZhuang=1, qiDui=1, scoreType=1, userId=809529, shenFeng=1, roomId=217590, daiTe=1, diaoYu=1, state=1, gangFanBei=1, roomType=2, circleNum=2}}
+2018-06-08 10:21:51,774-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - 请求处理时间：46
+2018-06-08 10:21:51,779-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=809529}
+2018-06-08 10:21:51,781-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:21:51,806-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[{lastNum=2, userInfo=[], gangZhuang=1, scoreType=1, qiDui=1, roomId=217590, shenFeng=1, daiTe=1, createTime=1528424511733, diaoYu=1, state=1, gangFanBei=1, circleNum=2}]
+2018-06-08 10:21:51,808-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - 请求处理时间：29
+2018-06-08 10:21:52,833-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 10:21:52,833-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 10:22:14,118-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - [100008-RECEIVE_DATE]:{interfaceId=100008, userId=390509, roomId=217590}
+2018-06-08 10:22:14,127-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - 加入房间,interfaceId -> 100008
+2018-06-08 10:22:14,129-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - [100008-SEND_DATA]:{userInfo=[{"playStatus":2,"userImg":"http://192.168.1.123/headimg/390509.jpg","gender":"1","ip":"192.168.1.156","position":4,"state":1,"userName":"wsw-14","userId":390509}], gangZhuang=1, reqState=1, scoreType=1, qiDui=1, userId=809529, roomId=217590, shenFeng=1, daiTe=1, diaoYu=1, gangFanBei=1, roomType=2, circleNum=2}
+2018-06-08 10:22:14,132-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - [100112-SEND_DATA]:{userImg=http://192.168.1.123/headimg/390509.jpg, position=4, userName=wsw-14, userId=390509, extraType=1, roomId=217590}
+2018-06-08 10:22:14,133-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - 请求处理时间：15
+2018-06-08 10:22:14,180-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=809529}
+2018-06-08 10:22:14,180-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:22:14,186-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[{lastNum=2, userInfo=[{userImg=http://192.168.1.123/headimg/390509.jpg, position=4, state=1, userName=wsw-14, userId=390509}], gangZhuang=1, scoreType=1, qiDui=1, roomId=217590, shenFeng=1, daiTe=1, createTime=1528424511733, diaoYu=1, state=1, gangFanBei=1, circleNum=2}]
+2018-06-08 10:22:14,187-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.executer.Executer - 请求处理时间：8
+2018-06-08 10:22:21,728-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.executer.Executer - [100200-RECEIVE_DATE]:{interfaceId=100200, userId=390509, roomId=217590}
+2018-06-08 10:22:21,737-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.function.TCPGameFunctions - 准备,interfaceId -> 100200
+2018-06-08 10:22:21,739-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.function.TCPGameFunctions - [100200-SEND_DATA]:{userInfo=[{playStatus=3, userId=390509}], roomInfo={state=1}}
+2018-06-08 10:22:21,741-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.executer.Executer - 请求处理时间：13
+2018-06-08 10:23:17,597-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为ae757138客户端userId390509,当前连接数为：1
+2018-06-08 10:23:17,599-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.function.TCPGameFunctions - [100109-SEND_DATA]:{state=2, userId=390509}
+2018-06-08 10:23:17,600-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.function.TCPGameFunctions - [100112-SEND_DATA]:{userImg=http://192.168.1.123/headimg/390509.jpg, position=4, userName=wsw-14, userId=390509, extraType=4, roomId=217590}
+2018-06-08 10:23:24,322-[YZT] [INFO] nioEventLoopGroup-3-3 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为a4dda504,当前连接数为：2
+2018-06-08 10:23:24,352-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.executer.Executer - [100100-RECEIVE_DATE]:{openId=wsw-16, interfaceId=100100, cId=47}
+2018-06-08 10:23:25,785-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.function.TCPGameFunctions - [100100-SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/670640.jpg, gender=1, money=100, ip=192.168.1.156, position=null, state=1, userName=wsw-16, userId=670640, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-08 10:23:25,787-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.executer.Executer - 请求处理时间：1436
+2018-06-08 10:23:59,021-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.executer.Executer - [100012-RECEIVE_DATE]:{interfaceId=100012, userId=390509, roomId=217590}
+2018-06-08 10:23:59,022-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - 准备,interfaceId -> 100012
+2018-06-08 10:23:59,034-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - [100107-SEND_DATA]:{type=1, userId=390509}
+2018-06-08 10:23:59,034-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - [100012-SEND_DATA]:{reqState=1}
+2018-06-08 10:23:59,035-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.executer.Executer - 请求处理时间：15
+2018-06-08 10:23:59,064-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=809529}
+2018-06-08 10:23:59,066-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:23:59,073-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[{lastNum=2, userInfo=[], gangZhuang=1, scoreType=1, qiDui=1, roomId=217590, shenFeng=1, daiTe=1, createTime=1528424511733, diaoYu=1, state=1, gangFanBei=1, circleNum=2}]
+2018-06-08 10:23:59,074-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.executer.Executer - 请求处理时间：10
+2018-06-08 10:24:10,568-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.executer.Executer - [100013-RECEIVE_DATE]:{interfaceId=100013, roomId=217590}
+2018-06-08 10:24:10,568-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.function.TCPGameFunctions - 代开模式中踢出玩家,interfaceId -> 100013
+2018-06-08 10:24:10,577-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.function.TCPGameFunctions - [100013-SEND_DATA]:{money=100, reqState=1}
+2018-06-08 10:24:10,579-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.executer.Executer - 请求处理时间：11
+2018-06-08 10:24:10,587-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=809529}
+2018-06-08 10:24:10,588-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:24:10,592-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[]
+2018-06-08 10:24:10,597-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.executer.Executer - 请求处理时间：10
+2018-06-08 10:24:33,037-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=809529}
+2018-06-08 10:24:33,038-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:24:33,039-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:24:33,040-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:25:29,480-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=809529}
+2018-06-08 10:25:29,481-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:25:29,497-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:25:29,498-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.executer.Executer - 请求处理时间：18
+2018-06-08 10:25:33,502-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=809529}
+2018-06-08 10:25:33,503-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:25:33,504-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:25:33,505-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.executer.Executer - 请求处理时间：5
+2018-06-08 10:25:50,204-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=809529}
+2018-06-08 10:25:50,204-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:25:50,207-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:25:50,209-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - 请求处理时间：5
+2018-06-08 10:25:58,640-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=809529}
+2018-06-08 10:25:58,640-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:25:58,641-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[]
+2018-06-08 10:25:58,641-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - 请求处理时间：1
+2018-06-08 10:26:00,297-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=809529}
+2018-06-08 10:26:00,297-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:00,300-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:00,301-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:26:09,133-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - [100007-RECEIVE_DATE]:{daiTe=1, gangZhuang=1, diaoYu=1, qiDui=1, scoreType=1, interfaceId=100007, gangFanBei=1, userId=670640, shenFeng=1, roomType=2, circleNum=2}
+2018-06-08 10:26:09,134-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - 创建房间,interfaceId -> 100007
+2018-06-08 10:26:09,136-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - [100007-SEND_DATA]:{userInfo={}, reqState=10, roomInfo={gangZhuang=1, qiDui=1, scoreType=1, userId=670640, shenFeng=1, roomId=246987, daiTe=1, diaoYu=1, state=1, gangFanBei=1, roomType=2, circleNum=2}}
+2018-06-08 10:26:09,139-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - 请求处理时间：6
+2018-06-08 10:26:09,169-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=670640}
+2018-06-08 10:26:09,169-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:26:09,171-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[{lastNum=2, userInfo=[], gangZhuang=1, scoreType=1, qiDui=1, roomId=246987, shenFeng=1, daiTe=1, createTime=1528424769136, diaoYu=1, state=1, gangFanBei=1, circleNum=2}]
+2018-06-08 10:26:09,172-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:26:23,802-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=670640}
+2018-06-08 10:26:23,802-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:23,803-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:23,804-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:26:25,646-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=670640}
+2018-06-08 10:26:25,647-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:25,649-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:25,649-[YZT] [INFO] pool-4-thread-7 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:26:34,974-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=670640}
+2018-06-08 10:26:34,975-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:34,975-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:34,976-[YZT] [INFO] pool-4-thread-8 com.yzt.logic.mj.executer.Executer - 请求处理时间：2
+2018-06-08 10:26:48,091-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=670640}
+2018-06-08 10:26:48,092-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:48,092-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:48,093-[YZT] [INFO] pool-4-thread-9 com.yzt.logic.mj.executer.Executer - 请求处理时间：2
+2018-06-08 10:26:52,011-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.executer.Executer - [100008-RECEIVE_DATE]:{interfaceId=100008, userId=809529, roomId=246987}
+2018-06-08 10:26:52,011-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - 加入房间,interfaceId -> 100008
+2018-06-08 10:26:52,012-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - [100008-SEND_DATA]:{userInfo=[{"playStatus":2,"userImg":"http://192.168.1.123/headimg/809529.jpg","gender":"1","ip":"192.168.1.156","position":3,"state":1,"userName":"wsw-15","userId":809529}], gangZhuang=1, reqState=1, scoreType=1, qiDui=1, userId=670640, roomId=246987, shenFeng=1, daiTe=1, diaoYu=1, gangFanBei=1, roomType=2, circleNum=2}
+2018-06-08 10:26:52,015-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.function.TCPGameFunctions - [100112-SEND_DATA]:{userImg=http://192.168.1.123/headimg/809529.jpg, position=3, userName=wsw-15, userId=809529, extraType=1, roomId=246987}
+2018-06-08 10:26:52,017-[YZT] [INFO] pool-4-thread-10 com.yzt.logic.mj.executer.Executer - 请求处理时间：6
+2018-06-08 10:26:52,058-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=670640}
+2018-06-08 10:26:52,059-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:26:52,060-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[{lastNum=2, userInfo=[{userImg=http://192.168.1.123/headimg/809529.jpg, position=3, state=1, userName=wsw-15, userId=809529}], gangZhuang=1, scoreType=1, qiDui=1, roomId=246987, shenFeng=1, daiTe=1, createTime=1528424769136, diaoYu=1, state=1, gangFanBei=1, circleNum=2}]
+2018-06-08 10:26:52,061-[YZT] [INFO] pool-4-thread-11 com.yzt.logic.mj.executer.Executer - 请求处理时间：3
+2018-06-08 10:26:55,517-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.executer.Executer - [100200-RECEIVE_DATE]:{interfaceId=100200, userId=809529, roomId=246987}
+2018-06-08 10:26:55,517-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.function.TCPGameFunctions - 准备,interfaceId -> 100200
+2018-06-08 10:26:55,519-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.function.TCPGameFunctions - [100200-SEND_DATA]:{userInfo=[{playStatus=3, userId=809529}], roomInfo={state=1}}
+2018-06-08 10:26:55,522-[YZT] [INFO] pool-4-thread-12 com.yzt.logic.mj.executer.Executer - 请求处理时间：5
+2018-06-08 10:26:56,536-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.executer.Executer - [100011-RECEIVE_DATE]:{interfaceId=100011, page=1, userId=670640}
+2018-06-08 10:26:56,537-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-08 10:26:56,539-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.function.TCPGameFunctions - [100011-SEND_DATA]:{pages=0, infos=[]}
+2018-06-08 10:26:56,540-[YZT] [INFO] pool-4-thread-13 com.yzt.logic.mj.executer.Executer - 请求处理时间：4
+2018-06-08 10:27:13,613-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.executer.Executer - [100013-RECEIVE_DATE]:{interfaceId=100013, roomId=246987}
+2018-06-08 10:27:13,614-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.function.TCPGameFunctions - 代开模式中踢出玩家,interfaceId -> 100013
+2018-06-08 10:27:13,615-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.function.TCPGameFunctions - [100107-SEND_DATA]:{type=2, userId=670640}
+2018-06-08 10:27:13,617-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.function.TCPGameFunctions - [100013-SEND_DATA]:{money=100, reqState=1}
+2018-06-08 10:27:13,618-[YZT] [INFO] pool-4-thread-14 com.yzt.logic.mj.executer.Executer - 请求处理时间：5
+2018-06-08 10:27:13,633-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.executer.Executer - [100010-RECEIVE_DATE]:{interfaceId=100010, userId=670640}
+2018-06-08 10:27:13,633-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-08 10:27:13,634-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.function.TCPGameFunctions - [100010-SEND_DATA]:[]
+2018-06-08 10:27:13,634-[YZT] [INFO] pool-4-thread-15 com.yzt.logic.mj.executer.Executer - 请求处理时间：1
+2018-06-08 10:28:40,724-[YZT] [INFO] nioEventLoopGroup-3-3 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为a4dda504客户端userId670640,当前连接数为：1
+2018-06-08 10:28:41,094-[YZT] [INFO] nioEventLoopGroup-3-4 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为21f7086e,当前连接数为：2
+2018-06-08 10:28:41,102-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.executer.Executer - [100100-RECEIVE_DATE]:{openId=wsw-14, interfaceId=100100, cId=47}
+2018-06-08 10:28:41,167-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.function.TCPGameFunctions - [100100-SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/390509.jpg, gender=1, money=80, ip=192.168.1.156, position=null, state=1, userName=wsw-14, userId=390509, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-08 10:28:41,170-[YZT] [INFO] pool-4-thread-16 com.yzt.logic.mj.executer.Executer - 请求处理时间：68
+2018-06-08 10:29:59,113-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - [100002-RECEIVE_DATE]:{interfaceId=100002, page=1, userId=390509}
+2018-06-08 10:29:59,114-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - 大厅查询战绩,interfaceId -> 100002
+2018-06-08 10:29:59,118-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - [100002-SEND_DATA]:{"pages":1,"infos":[{"lastNum":"2","userInfo":"[{\"score\":0,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":0,\"userName\":\"wsw-14\",\"userId\":390509}]","xiaoJuNum":"1","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[0,0,0,0]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"924430","daiTe":"1","createTime":"1528355922219","diaoYu":"1","state":"2","gangFanBei":"1","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":-384,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":384,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-384,0,384,0]]","scoreType":"2","qiDui":"1","roomId":"521207","shenFeng":"1","daiTe":"1","createTime":"1528338893810","diaoYu":"2","state":"3","gangFanBei":"2","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":-34,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":25,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":40,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":-31,\"userName\":\"wsw-14\",\"userId\":390509}]","lastNum":"2","xiaoJuNum":"3","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-14,-9,32,-9],[-9,-11,31,-11],[-11,45,-23,-11]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"499579","daiTe":"1","createTime":"1528338012845","diaoYu":"1","state":"3","gangFanBei":"1","roomType":"1","circleNum":"2"},{"lastNum":"2","userInfo":"[{\"score\":-30,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":-19,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":27,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":22,\"userName\":\"wsw-16\",\"userId\":670640}]","xiaoJuNum":"4","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-8,-7,23,-8],[-9,-9,25,-7],[-13,-3,-21,37],[0,0,0,0]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"460652","daiTe":"1","createTime":"1528277738154","diaoYu":"1","state":"2","gangFanBei":"1","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":0,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":0,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://47.93.61.29:8086/TYMJbackFilePath/","xiaoJuInfo":"[[0,0,0,0]]","scoreType":"2","qiDui":"2","shenFeng":"1","roomId":"131350","daiTe":"2","createTime":"1528194114127","diaoYu":"2","state":"2","gangFanBei":"2","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":7,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":-9,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":-1,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":3,\"userName\":\"wsw-15\",\"userId\":809529}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[7,-9,-1,3]]","scoreType":"2","qiDui":"2","shenFeng":"1","roomId":"393756","daiTe":"2","createTime":"1528168198936","diaoYu":"2","state":"3","gangFanBei":"2","roomType":"1","circleNum":"2"}]}
+2018-06-08 10:29:59,128-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - 请求处理时间：15
+2018-06-08 10:30:08,671-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - [100002-RECEIVE_DATE]:{interfaceId=100002, page=1, userId=390509}
+2018-06-08 10:30:08,672-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - 大厅查询战绩,interfaceId -> 100002
+2018-06-08 10:30:08,676-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - [100002-SEND_DATA]:{"pages":1,"infos":[{"lastNum":"2","userInfo":"[{\"score\":0,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":0,\"userName\":\"wsw-14\",\"userId\":390509}]","xiaoJuNum":"1","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[0,0,0,0]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"924430","daiTe":"1","createTime":"1528355922219","diaoYu":"1","state":"2","gangFanBei":"1","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":-384,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":384,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-384,0,384,0]]","scoreType":"2","qiDui":"1","roomId":"521207","shenFeng":"1","daiTe":"1","createTime":"1528338893810","diaoYu":"2","state":"3","gangFanBei":"2","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":-34,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":25,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":40,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":-31,\"userName\":\"wsw-14\",\"userId\":390509}]","lastNum":"2","xiaoJuNum":"3","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-14,-9,32,-9],[-9,-11,31,-11],[-11,45,-23,-11]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"499579","daiTe":"1","createTime":"1528338012845","diaoYu":"1","state":"3","gangFanBei":"1","roomType":"1","circleNum":"2"},{"lastNum":"2","userInfo":"[{\"score\":-30,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":-19,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":27,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":22,\"userName\":\"wsw-16\",\"userId\":670640}]","xiaoJuNum":"4","gangZhuang":"1","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[-8,-7,23,-8],[-9,-9,25,-7],[-13,-3,-21,37],[0,0,0,0]]","scoreType":"1","qiDui":"1","shenFeng":"1","roomId":"460652","daiTe":"1","createTime":"1528277738154","diaoYu":"1","state":"2","gangFanBei":"1","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":0,\"userName\":\"wsw-15\",\"userId\":809529},{\"score\":0,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":0,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":0,\"userName\":\"wsw-17\",\"userId\":884120}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://47.93.61.29:8086/TYMJbackFilePath/","xiaoJuInfo":"[[0,0,0,0]]","scoreType":"2","qiDui":"2","shenFeng":"1","roomId":"131350","daiTe":"2","createTime":"1528194114127","diaoYu":"2","state":"2","gangFanBei":"2","roomType":"1","circleNum":"2"},{"userInfo":"[{\"score\":7,\"userName\":\"wsw-17\",\"userId\":884120},{\"score\":-9,\"userName\":\"wsw-14\",\"userId\":390509},{\"score\":-1,\"userName\":\"wsw-16\",\"userId\":670640},{\"score\":3,\"userName\":\"wsw-15\",\"userId\":809529}]","lastNum":"2","xiaoJuNum":"1","gangZhuang":"2","backUrl":"http://192.168.1.123:8086/TANGYUAN/","xiaoJuInfo":"[[7,-9,-1,3]]","scoreType":"2","qiDui":"2","shenFeng":"1","roomId":"393756","daiTe":"2","createTime":"1528168198936","diaoYu":"2","state":"3","gangFanBei":"2","roomType":"1","circleNum":"2"}]}
+2018-06-08 10:30:08,688-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - 请求处理时间：17
+2018-06-08 10:30:19,544-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - [500002-RECEIVE_DATE]:{interfaceId=500002, userId=390509}
+2018-06-08 10:30:19,551-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - 查询我的俱乐部,interfaceId -> 500002
+2018-06-08 10:30:19,551-[YZT] [ERROR] pool-4-thread-3 com.yzt.logic.mj.dao.ClubMapper - sql name ==>>com.yzt.logic.mj.dao.ClubMapper.selectClubByUserId
+2018-06-08 10:30:19,688-[YZT] [ERROR] pool-4-thread-3 com.yzt.logic.mj.dao.ClubMapper - sql name ==>>com.yzt.logic.mj.dao.ClubMapper.selectUserState
+2018-06-08 10:30:19,743-[YZT] [ERROR] pool-4-thread-3 com.yzt.logic.mj.dao.ClubMapper - sql name ==>>com.yzt.logic.mj.dao.ClubMapper.selectByClubId
+2018-06-08 10:30:19,853-[YZT] [ERROR] pool-4-thread-3 com.yzt.logic.mj.dao.ClubMapper - sql name ==>>com.yzt.logic.mj.dao.ClubMapper.selectCreateName
+2018-06-08 10:30:19,933-[YZT] [ERROR] pool-4-thread-3 com.yzt.logic.mj.dao.ClubMapper - sql name ==>>com.yzt.logic.mj.dao.ClubMapper.allUsers
+2018-06-08 10:30:20,008-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - [500002-SEND_DATA]:[{allNums=17, freeStart=0, clubName=哈哈哈, clubId=477308, clubUserName=wsw-10, exState=1, freeEnd=0}]
+2018-06-08 10:30:20,011-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - 请求处理时间：467
+2018-06-08 11:21:52,845-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录4条
+2018-06-08 11:21:52,847-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 12:06:05,515-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为e76b2218客户端userId809529,当前连接数为：0
+2018-06-08 12:06:05,515-[YZT] [INFO] nioEventLoopGroup-3-4 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为21f7086e客户端userId390509,当前连接数为：0
+2018-06-08 12:21:52,851-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 12:21:52,852-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 13:21:52,859-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 13:21:52,859-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 14:21:52,879-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 14:21:52,882-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 15:21:52,892-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 15:21:52,892-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 16:21:52,908-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 16:21:52,911-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 17:21:52,920-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 17:21:52,921-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 18:21:52,932-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-08 18:21:52,937-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-08 19:21:52,942-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录4条
+2018-06-08 19:21:52,942-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条

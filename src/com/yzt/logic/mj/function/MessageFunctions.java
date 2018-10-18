@@ -170,7 +170,7 @@ public class MessageFunctions extends TCPGameFunctions {
 		currentUserInfo.put("score", player.getScore());
 		currentUserInfo.put("notice", player.getNotice());
 		currentUserInfo.put("state", player.getState());
-		currentUserInfo.put("shuoBaYi", player.getShouBaYi());
+		currentUserInfo.put("shouBaYi", player.getShouBaYi());
 		if (room != null && player.getPlayStatus() == Cnst.PLAYER_STATE_GAME) {
 			currentUserInfo.put("pais", player.getCurrentMjList());
 			currentUserInfo.put("chuList", player.getChuList());
@@ -221,7 +221,7 @@ public class MessageFunctions extends TCPGameFunctions {
 			currentUserInfo.put("userAgree", player.getUserAgree());
 			currentUserInfo.put("money", player.getMoney());
 			currentUserInfo.put("score", player.getScore());
-			currentUserInfo.put("shuoBaYi", player.getShouBaYi());
+			currentUserInfo.put("shouBaYi", player.getShouBaYi());
 			WSClient wsClient = TCPGameFunctions.getWSClientManager()
 					.getWSClient(player.getChannelId());
 			if (wsClient == null) {

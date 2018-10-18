@@ -1,0 +1,83 @@
+2018-06-04 00:57:43,435-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 00:57:43,436-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 01:57:43,438-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 01:57:43,439-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 02:57:43,442-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 02:57:43,442-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 03:55:54,031-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.BackFileUtil - 回放文件清理完成！
+2018-06-04 03:57:43,448-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 03:57:43,448-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 04:57:43,451-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 04:57:43,451-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 05:57:43,453-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 05:57:43,454-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 06:57:43,456-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 06:57:43,456-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 07:57:43,460-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 07:57:43,460-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 08:57:43,462-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 08:57:43,462-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 09:57:43,472-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 09:57:43,473-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 10:57:43,492-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 10:57:43,497-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 11:48:00,008-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为27c1c547,当前连接数为：1
+2018-06-04 11:48:00,037-[YZT] [INFO] pool-5-thread-5 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{openId=wsw-1, interfaceId=100100, cId=47}
+2018-06-04 11:48:00,080-[YZT] [WARN] pool-5-thread-5 org.apache.ibatis.datasource.pooled.PooledDataSource - Execution of ping query 'select 1' failed: The last packet successfully received from the server was235590 seconds ago.The last packet sent successfully to the server was 235590 seconds ago, which  is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+2018-06-04 11:48:00,556-[YZT] [INFO] pool-5-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/747994.jpg, gender=1, money=2000, ip=192.168.1.88, position=null, state=1, userName=wsw-1, userId=386186, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-04 11:48:00,557-[YZT] [INFO] pool-5-thread-5 com.yzt.logic.mj.executer.Executer - 请求处理时间：521
+2018-06-04 11:48:03,992-[YZT] [INFO] pool-5-thread-6 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{interfaceId=100010, userId=386186}
+2018-06-04 11:48:03,993-[YZT] [INFO] pool-5-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - 查看代开房间列表,interfaceId -> 100010
+2018-06-04 11:48:03,993-[YZT] [INFO] pool-5-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:[]
+2018-06-04 11:48:03,994-[YZT] [INFO] pool-5-thread-6 com.yzt.logic.mj.executer.Executer - 请求处理时间：2
+2018-06-04 11:48:05,190-[YZT] [INFO] pool-5-thread-7 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{interfaceId=100011, page=1, userId=386186}
+2018-06-04 11:48:05,191-[YZT] [INFO] pool-5-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - 查看历史代开房间列表,interfaceId -> 100011
+2018-06-04 11:48:05,194-[YZT] [INFO] pool-5-thread-7 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{pages=0, infos=[]}
+2018-06-04 11:48:05,195-[YZT] [INFO] pool-5-thread-7 com.yzt.logic.mj.executer.Executer - 请求处理时间：5
+2018-06-04 11:48:15,905-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为27c1c547客户端userId386186,当前连接数为：0
+2018-06-04 11:57:43,510-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 11:57:43,512-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 12:57:43,515-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 12:57:43,515-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 13:57:43,530-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 13:57:43,534-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 14:57:43,545-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 14:57:43,551-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 18:48:35,520-[YZT] [INFO] main com.yzt.logic.util.ProjectInfoPropertyUtil - 加载properties文件内容完成...........
+2018-06-04 18:48:35,662-[YZT] [INFO] main com.yzt.logic.util.redis.MyRedis - redis 初始化完成
+2018-06-04 18:48:36,329-[YZT] [INFO] main com.yzt.logic.util.CreateInterfacedFile - 生成中·········生成接口文档在桌面·······我日桌面不给生成 扔D盘了
+2018-06-04 18:48:37,801-[YZT] [WARN] pool-3-thread-1 io.netty.bootstrap.ServerBootstrap - Unknown channel option 'TCP_NODELAY' for channel '[id: 0x054f7dd4]'
+2018-06-04 18:48:37,817-[YZT] [INFO] pool-3-thread-1 io.netty.channel.ChannelInboundHandlerAdapter - webSocket server startup with port 8245
+2018-06-04 18:48:53,571-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为969514a8,当前连接数为：1
+2018-06-04 18:48:53,620-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{openId=wsw-14, interfaceId=100100, cId=47}
+2018-06-04 18:48:53,641-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.dao.UserMapper - sql name ==>>com.yzt.logic.mj.dao.UserMapper.getNotice
+2018-06-04 18:48:57,298-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/390509.jpg, gender=1, money=1936, ip=192.168.1.156, position=null, state=1, userName=wsw-14, userId=390509, notice=汤圆测试服，文明游戏，禁止赌博}}
+2018-06-04 18:48:57,303-[YZT] [INFO] pool-4-thread-1 com.yzt.logic.mj.executer.Executer - 请求处理时间：3684
+2018-06-04 18:49:01,981-[YZT] [INFO] nioEventLoopGroup-3-1 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为969514a8客户端userId390509,当前连接数为：0
+2018-06-04 18:49:02,461-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为7e3b221e,当前连接数为：1
+2018-06-04 18:49:02,479-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{openId=wsw-1, interfaceId=100100, cId=47}
+2018-06-04 18:49:04,027-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{currentUser={playStatus=1, userAgree=1, score=null, userImg=http://192.168.1.123/headimg/747994.jpg, gender=1, money=2000, ip=192.168.1.156, position=null, state=1, userName=wsw-1, userId=386186, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-04 18:49:04,028-[YZT] [INFO] pool-4-thread-2 com.yzt.logic.mj.executer.Executer - 请求处理时间：1549
+2018-06-04 18:49:18,327-[YZT] [INFO] nioEventLoopGroup-3-2 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为7e3b221e客户端userId386186,当前连接数为：0
+2018-06-04 18:49:18,797-[YZT] [INFO] nioEventLoopGroup-3-3 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为7af893ae,当前连接数为：1
+2018-06-04 18:49:18,828-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{openId=wsw-55, interfaceId=100100, cId=47}
+2018-06-04 18:49:19,112-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.dao.UserMapper - sql name ==>>com.yzt.logic.mj.dao.UserMapper.getInitMoney
+2018-06-04 18:49:19,254-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{currentUser={playStatus=1, userAgree=0, score=null, userImg=http://192.168.1.123/headimg/653591.jpg, gender=1, money=100, ip=192.168.1.156, position=null, state=1, userName=wsw-55, userId=653591, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-04 18:49:19,258-[YZT] [INFO] pool-4-thread-3 com.yzt.logic.mj.executer.Executer - 请求处理时间：430
+2018-06-04 18:49:20,697-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{interfaceId=100009, userId=653591}
+2018-06-04 18:49:20,698-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - 用户点击同意协议,interfaceId -> 100009
+2018-06-04 18:49:20,699-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{"reqState":1}
+2018-06-04 18:49:20,746-[YZT] [INFO] pool-4-thread-4 com.yzt.logic.mj.executer.Executer - 请求处理时间：49
+2018-06-04 18:49:58,399-[YZT] [INFO] nioEventLoopGroup-3-3 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为7af893ae客户端userId653591,当前连接数为：0
+2018-06-04 18:49:59,055-[YZT] [INFO] nioEventLoopGroup-3-4 com.yzt.logic.mj.adapter.MJLogicAdapter - 新客户端接入，id为a4d4837a,当前连接数为：1
+2018-06-04 18:49:59,069-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{openId=wsw-14, interfaceId=100100, cId=47}
+2018-06-04 18:49:59,468-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.dao.UserMapper - sql name ==>>com.yzt.logic.mj.dao.UserMapper.getInitMoney
+2018-06-04 18:49:59,617-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{currentUser={playStatus=1, userAgree=0, score=null, userImg=http://192.168.1.123/headimg/390509.jpg, gender=1, money=100, ip=192.168.1.156, position=null, state=1, userName=wsw-14, userId=390509, notice="汤圆测试服，文明游戏，禁止赌博"}}
+2018-06-04 18:49:59,618-[YZT] [INFO] pool-4-thread-5 com.yzt.logic.mj.executer.Executer - 请求处理时间：549
+2018-06-04 18:50:00,804-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - [RECEIVE_DATE]:{interfaceId=100009, userId=390509}
+2018-06-04 18:50:00,805-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - 用户点击同意协议,interfaceId -> 100009
+2018-06-04 18:50:00,806-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.function.TCPGameFunctions - [SEND_DATA]:{"reqState":1}
+2018-06-04 18:50:00,922-[YZT] [INFO] pool-4-thread-6 com.yzt.logic.mj.executer.Executer - 请求处理时间：118
+2018-06-04 18:50:16,990-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理战绩完成，共清理过期记录0条
+2018-06-04 18:50:16,992-[YZT] [INFO] pool-2-thread-1 com.yzt.logic.util.Schdualed - 每小时清理代开战绩完成，共清理过期记录0条
+2018-06-04 19:03:41,404-[YZT] [INFO] nioEventLoopGroup-3-4 com.yzt.logic.mj.adapter.MJLogicAdapter - playerOut============》客户端断开，id为a4d4837a客户端userId390509,当前连接数为：0
